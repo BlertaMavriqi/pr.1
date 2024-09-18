@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.navbar {
+    background-color: #7c0439;
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    color: white;
+    font-family: cursive;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff3366;
+    transform: translateY(-2px);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: bottom right;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.product-grid {
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .product {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .product p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  button {
+    background-color: #7c0439;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ff3366;
+  }
+  
+  footer {
+    margin-top: 100px;
+    background-color: #7c0439;
+    color: white;
+    padding: 40px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 0 20px;
+  }
+  
+  .footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ff3366;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-section ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-section form input {
+    padding: 10px;
+    width: 70%;
+    margin-right: 10px;
+    border: none;
+  }
+  
+  .footer-section form button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #ff3366;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .footer-section form button:hover {
+    background-color: #e62e5c;
+  }
+
+  .footer-section {
+    text-align: center;
+    margin: 20px; 
+  }
+  
+  .footer-section h4 {
+    font-size: 18px;
+    color: #ff3366;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section a {
+    display: inline-block; 
+    margin: 0 10px; 
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-section a:hover {
+    color: #ff3366;
+  }
+  
+  .footer-section .fa {
+    font-size: 24px; 
+  }
+/* Modal i Shportës */
+.cart-modal {
+  display: none; /* Fillimisht i fshehur */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Ngjyra e sfondit */
+}
+
+.cart-modal-content {
+  background-color: white;
+  margin: 10% auto; 
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%; /* Gjerësia e modalit */
+  max-width: 600px; /* Gjerësia maksimale */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.checkout-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#checkout-btn {
+  padding: 10px 20px;
+  background-color: #ff3366;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#checkout-btn:hover {
+  background-color: #e62e5c;
+}
+
+
